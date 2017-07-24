@@ -1,0 +1,40 @@
+{
+    "name": "demv/file",
+    "description": "demv file",
+    "license": "MIT",
+    "type": "library",
+    "homepage": "https://github.com/demvsystems/file",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "Randy Schütt",
+            "email": "rswhite4@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "dgame/php-ensurance": "0.*",
+        "ralouphie/mimey": "1.*",
+        "codeception/specify": "^0.4.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-4": {
+            "DEMV\\File\\": "src/",
+            "DEMV\\File\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "phpunit"
+        ],
+        "coverage": [
+            "phpunit --coverage-clover=coverage"
+        ]
+    }
+}
