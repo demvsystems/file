@@ -7,18 +7,18 @@
     "keywords": [],
     "authors": [
         {
-            "name": "Randy Schütt",
-            "email": "rswhite4@gmail.com"
+            "name": "DEMV-Systems",
+            "email": "packages@demv.de"
         }
     ],
     "require": {
         "php": ">=7.0",
         "dgame/php-ensurance": "0.*",
-        "ralouphie/mimey": "1.*",
-        "codeception/specify": "^0.4.6"
+        "ralouphie/mimey": "1.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "5.*.*"
+        "phpunit/phpunit": "5.*.*",
+        "codeception/specify": "^0.4.6"
     },
     "autoload": {
         "classmap": [
