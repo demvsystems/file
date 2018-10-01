@@ -18,7 +18,7 @@ final class FilenameTest extends TestCase
     /**
      * Test für clean
      */
-    public function testClean()
+    public function testClean(): void
     {
         $testfilenames = [
             'test.pdf'       => 'test_pdf',
@@ -45,7 +45,7 @@ final class FilenameTest extends TestCase
     /**
      * Test für limitLength
      */
-    public function testLimitLength()
+    public function testLimitLength(): void
     {
         $name     = 'Dies_ist_eine_testdatei.pdf';
         $filename = new Filename($name);
@@ -56,7 +56,7 @@ final class FilenameTest extends TestCase
     /**
      * Test für getExtension
      */
-    public function testGetExtension()
+    public function testGetExtension(): void
     {
         $name     = 'Dies_ist_eine_testdatei.pdf';
         $filename = new Filename($name);
@@ -66,7 +66,7 @@ final class FilenameTest extends TestCase
     /**
      * Test für hasExtension
      */
-    public function testHasExtension()
+    public function testHasExtension(): void
     {
         $name     = 'Dies_ist_eine_testdatei.pdf';
         $filename = new Filename($name);
@@ -80,7 +80,7 @@ final class FilenameTest extends TestCase
     /**
      * Test für setExtension
      */
-    public function testSetExtension()
+    public function testSetExtension(): void
     {
         $name     = 'Dies_ist_eine_testdatei';
         $filename = new Filename($name);
@@ -98,7 +98,7 @@ final class FilenameTest extends TestCase
     /**
      * Test für getBasename
      */
-    public function testGetBasename()
+    public function testGetBasename(): void
     {
         $name     = 'path/to/file/Dies_ist_eine_testdatei.pdf';
         $filename = new Filename($name);
@@ -109,7 +109,7 @@ final class FilenameTest extends TestCase
     /**
      * Test für isValid
      */
-    public function testIsValid()
+    public function testIsValid(): void
     {
         $name     = 'Dies_ist_eine_testdatei';
         $filename = new Filename($name);
@@ -127,7 +127,7 @@ final class FilenameTest extends TestCase
     /**
      * Test für assemble
      */
-    public function testAssemble()
+    public function testAssemble(): void
     {
         $name     = 'Dies_ist_eine_testdatei';
         $filename = new Filename($name);
@@ -142,7 +142,7 @@ final class FilenameTest extends TestCase
         $filename->setExtension('zip');
         $this->assertEquals('dies_ist_eine_testdatei.zip', $filename->assemble());
 
-        $this->specify('Test für Filenames mit Sonderzeichen', function () {
+        $this->specify('Test für Filenames mit Sonderzeichen', function (): void {
             $names = [
                 'testdatei Nr 01.pdf' => 'testdatei_nr_01.pdf',
                 'testdätei.pdf'       => 'testdaetei.pdf',
@@ -160,7 +160,7 @@ final class FilenameTest extends TestCase
             }
         });
 
-        $this->specify('Test cases', function () {
+        $this->specify('Test cases', function (): void {
             $names = [
                 'Foo/bär.pdf'                                                                 => 'foo_baer.pdf',
                 'Änderungsschneiderei.pdf'                                                    => 'aenderungsschneiderei.pdf',

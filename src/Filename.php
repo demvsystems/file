@@ -62,7 +62,7 @@ final class Filename
      *
      * @throws \Exception
      */
-    public function limitLength(int $length)
+    public function limitLength(int $length): void
     {
         enforce($length > 0)->orThrow('Invalide Länge: %d', $length);
 
@@ -119,7 +119,7 @@ final class Filename
     /**
      * @param string $extension
      */
-    public function setExtension(string $extension)
+    public function setExtension(string $extension): void
     {
         $extension = strtolower($extension);
         if (MimeTypesFactory::create()->getMimeType($extension) !== null) {
