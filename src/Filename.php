@@ -2,7 +2,6 @@
 
 namespace DEMV\File;
 
-use Mimey\MimeTypes;
 use function Dgame\Ensurance\enforce;
 
 /**
@@ -123,8 +122,7 @@ final class Filename
     public function setExtension(string $extension)
     {
         $extension = strtolower($extension);
-        $mime      = new MimeTypes();
-        if ($mime->getMimeType($extension) !== null) {
+        if (MimeTypesFactory::create()->getMimeType($extension) !== null) {
             $this->extension = $extension;
         }
     }
