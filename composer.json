@@ -12,8 +12,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
-        "dgame/php-ensurance": "^1",
+        "php": ">=7.1",
+        "dgame/php-ensurance": "^1.0 || ^2.0",
         "ralouphie/mimey": "1.*"
     },
     "require-dev": {

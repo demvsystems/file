@@ -2,7 +2,6 @@
 
 namespace DEMV\File;
 
-use Mimey\MimeTypes;
 use function Dgame\Ensurance\enforce;
 
 /**
@@ -63,7 +62,7 @@ final class Filename
      *
      * @throws \Exception
      */
-    public function limitLength(int $length)
+    public function limitLength(int $length): void
     {
         enforce($length > 0)->orThrow('Invalide Länge: %d', $length);
 
@@ -120,11 +119,10 @@ final class Filename
     /**
      * @param string $extension
      */
-    public function setExtension(string $extension)
+    public function setExtension(string $extension): void
     {
         $extension = strtolower($extension);
-        $mime      = new MimeTypes();
-        if ($mime->getMimeType($extension) !== null) {
+        if (MimeTypesFactory::create()->getMimeType($extension) !== null) {
             $this->extension = $extension;
         }
     }
