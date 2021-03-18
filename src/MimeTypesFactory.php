@@ -19,6 +19,7 @@ final class MimeTypesFactory
         $builder = MimeMappingBuilder::create();
         $builder->add('application/gzip', 'gzip');
         $builder->add('application/gzip', 'gz');
+        $builder->add('application/vnd.ms-outlook', 'msg');
 
         return new MimeTypes($builder->getMapping());
     }
