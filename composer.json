@@ -12,9 +12,9 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": ">=7.4",
         "dgame/php-ensurance": "^2.0",
-        "ralouphie/mimey": "dev-php-8"
+        "ralouphie/mimey": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^9",
