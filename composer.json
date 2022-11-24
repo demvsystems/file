@@ -32,7 +32,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "git@github.com:cjschneider2/mimey.git",
+            "url": "git@github.com:demvsystems/mimey.git",
             "no-api": true
         }
     ],
