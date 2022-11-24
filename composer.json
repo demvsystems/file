@@ -12,12 +12,12 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
-        "dgame/php-ensurance": "^1.0 || ^2.0",
-        "ralouphie/mimey": "^2.0"
+        "php": ">=7.4",
+        "dgame/php-ensurance": "^2.0",
+        "ralouphie/mimey": "dev-master"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.4",
+        "phpunit/phpunit": "^9",
         "codeception/specify": "^0.4.6"
     },
     "autoload": {
@@ -29,6 +29,13 @@
             "DEMV\\File\\Test\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:demvsystems/mimey.git",
+            "no-api": true
+        }
+    ],
     "scripts": {
         "test": [
             "phpunit"
