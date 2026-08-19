@@ -12,9 +12,9 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.3",
         "dgame/php-ensurance": "^2.0",
-        "ralouphie/mimey": "dev-master"
+        "elephox/mimey": "^4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9",
@@ -31,16 +31,9 @@
     },
     "config": {
         "platform": {
-            "php": "7.4.33"
+            "php": "8.3.0"
         }
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:demvsystems/mimey.git",
-            "no-api": true
-        }
-    ],
     "scripts": {
         "test": [
             "phpunit"
