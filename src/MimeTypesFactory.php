@@ -2,8 +2,8 @@
 
 namespace DEMV\File;
 
-use Mimey\MimeMappingBuilder;
-use Mimey\MimeTypes;
+use Elephox\Mimey\MimeMappingBuilder;
+use Elephox\Mimey\MimeTypes;
 
 /**
  * Class MimeExtensions
