@@ -25,4 +25,12 @@ final class MimeTypesFactoryTest extends TestCase
         $this->assertSame('text/plain', $mimeTypes->getMimeType('env'));
         $this->assertSame('text/plain', $mimeTypes->getMimeType('txt'));
     }
+
+    public function testGdvIsKnownWithoutReplacingTxt(): void
+    {
+        $mimeTypes = MimeTypesFactory::create();
+
+        $this->assertSame('text/plain', $mimeTypes->getMimeType('gdv'));
+        $this->assertSame('txt', $mimeTypes->getExtension('text/plain'));
+    }
 }
