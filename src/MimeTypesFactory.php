@@ -22,6 +22,7 @@ final class MimeTypesFactory
         $builder->add('application/vnd.ms-outlook', 'msg');
         $builder->add('application/dat', 'dat');
         $builder->add('text/plain', 'txt');
+        $builder->add('text/plain', 'gdv', prepend_extension: false);
 
         return new MimeTypes($builder->getMapping());
     }
